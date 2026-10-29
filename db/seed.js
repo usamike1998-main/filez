@@ -1,14 +1,12 @@
 import db from "#db/client";
 
+import { createFile } from "#db/queries/files";
+import { createFolder } from "#db/queries/folders";
+
 await db.connect();
 await seed();
 await db.end();
 console.log("🌱 Database seeded.");
-
-async function seed() {
-  // TODO
-}
-
 async function seed() {
   for (let i = 1; i < 4; i++) {
     const folder = await createFolder("Folder " + i);
