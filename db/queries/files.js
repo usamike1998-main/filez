@@ -15,7 +15,7 @@ export async function createFile(name, size, folderId) {
   return file;
 }
 
-export async function getFilesIncludingFolderName() {
+export async function getFilesAndFolderName() {
   const sql = `
   SELECT
     files.*,
